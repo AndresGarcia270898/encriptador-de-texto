@@ -1,41 +1,42 @@
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>encriptador</title>
+    <title>Encriptador</title>
     <link rel="shortcut icon" href="/imagenes/icono.webp" type="image/x-icon">
     <link rel="stylesheet" href="/styles/style.css">
 </head>
-<body>
+<body id="body">
     <main>
-    <div class="contenedor_mensaje">
-        <div class="contenedor_color">
-        <img src="/imagenes/encriptador.png" alt="imagen encriptador" class="imagen_encriptador">
-        <button class="modo_obscuro">MODO OBSCURO</button>
-        <button class="modo_claro">MODO CLARO</button>
+        <div class="contenedor_mensaje">
+            <div class="contenedor_color">
+                <img src="/imagenes/encriptador.png" alt="imagen encriptador" class="imagen_encriptador">
+                <button class="modo_obscuro" id="modo_obscuro">MODO OBSCURO</button>
+                <button class="modo_claro" id="modo_claro">MODO CLARO</button>
+            </div>
+            <textarea id="encriptar_texto" placeholder="escribe aqui:"></textarea>
+            <p class="contenedor_mensaje_advertencia">
+                <img id="imagen_advertencia" src="/imagenes/advertencia.avif" alt="imagen de advertencia">solo se permiten letras minúsculas y sin acentos.
+            </p>
+            <div class="contenedor_botones">
+                <button id="button_encriptar" class="button_encriptar">Encriptar</button>
+                <button id="button_desencriptar" class="button_desencriptar">Desencriptar</button>
+            </div>
         </div>
-        <textarea name="mensaje" id="mensaje" rows="5" cols="50 " placeholder="escribe aqui tu mensaje."></textarea>
-        <p class="contenedor_mensaje_advertencia">
-            <img id="imagen_advertencia" src="/imagenes/advertencia.avif" alt="imagen de advertencia">solo se permiten letras minusculas y sin acentos.
-        </p>   
-        <div class="contenedor_botones">
-            <button class="boton_encriptar">encriptar</button>
-            <button class="boton_desencriptar">desencriptar</button>
+        <div class="contenedor_desencriptado" id="contenedor_desencriptado">
+            <textarea id="desencriptar_texto" placeholder="aqui aparecera el texto encriptado"></textarea>
+            <button id="button_copiar">Copiar</button>
         </div>
-    </div>
-    <div class="contenedor_desencriptado">
-        <div id="contenedor_desencriptado_texto" contenteditable="false" >
-            <img class="imagen_espera" src="/imagenes/1.png" alt="imagen de espera texto encriptado">
-        </div>
-        <button class="copiar_al_portapapeles">copiar</button>
-    </div>
     </main>
-    <footer>
-        <p class="datos_desarrollador">
+    <footerm >
+        <p class="datos_desarrollador" id="datos_desarrollador">
             <img src="/imagenes/yo.jpg" alt="imagen del desarrollador de la pagina" class="imagen_desarrollador">
             Creado por: Jose Andres Garcia Espejel
         </p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
